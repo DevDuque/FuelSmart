@@ -62,9 +62,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            android:text="@string/alcohol_value"
+            android:hint="@string/alcohol_value"
             android:textSize="14sp"
             android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
             android:textStyle="bold"
             android:textAlignment="center"
 
@@ -89,6 +90,7 @@
             android:text="@string/gas_value"
             android:textSize="14sp"
             android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
             android:textStyle="bold"
             android:textAlignment="center"
 

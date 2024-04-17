@@ -45,9 +45,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
 
-        android:text="@string/alcohol_price"
+        android:hint="@string/alcohol_price"
         android:textSize="14sp"
         android:textColor="@color/primary"
+        android:textColorHint="@color/primary"
         android:textStyle="bold"
         android:textAlignment="center"
 
@@ -63,9 +64,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
 
-        android:text="@string/gas_price"
+        android:hint="@string/gas_price"
         android:textSize="14sp"
         android:textColor="@color/primary"
+        android:textColorHint="@color/primary"
         android:textStyle="bold"
         android:textAlignment="center"
 

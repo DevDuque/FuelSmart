@@ -14,6 +14,6 @@
         </shape>
     </item>
     <!-- Icon -->
-    <item android:drawable="@drawable/Back_Icon"
+    <item android:drawable="@drawable/back_icon"
         android:gravity="center" />
 </layer-list>

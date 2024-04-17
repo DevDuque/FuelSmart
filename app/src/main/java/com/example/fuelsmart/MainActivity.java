@@ -3,6 +3,7 @@ package com.example.fuelsmart;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button btnSubmit = (Button) findViewById(R.id.btn_submit);
+        btnSubmit.setOnClickListener(onClickSubmit());
     }
 
     private void alert(String s) {
@@ -41,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
                 String gasPrice = gasInput.getText().toString();
 
                 // Garantindo que os campos foram inseridos
-                if(!alcoholPrice.isEmpty() || !gasPrice.isEmpty()) {
+                if(alcoholPrice.isEmpty() || gasPrice.isEmpty()) {
+                    alert("Por favor insira um valor válido para os campos");
+                } else {
                     // Navegando para próxima tela
                     Intent nextPage = new Intent(getBaseContext(), ConsumePageActivity.class);
 
@@ -50,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
                     prizes.putString("alcoholPrize", alcoholPrice);
                     prizes.putString("gasPrize", gasPrice);
                     nextPage.putExtras(prizes);
-
-                } else {
-                    alert("Por favor insira um valor válido para os campos");
                 }
             }
         };
