@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsumePageActivity"
+    android:background="@color/background"
+    >
+    <!-- TitleRow -->
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="48sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            />
+    </TableRow>
+
+    <!-- ImageRow -->
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="40dp" >
+
+        <ImageView
+            android:id="@+id/coin_logo"
+
+            android:layout_width="190dp"
+            android:layout_height="130dp"
+
+            android:layout_gravity="center"
+
+            android:src="@drawable/buy_img" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" >
+
+        <EditText android:id="@+id/input_AlcoholValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="@string/alcohol_value"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textAlignment="center"
+
+            android:background="@drawable/btn_input" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" >
+
+        <EditText android:id="@+id/input_GasValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="@string/gas_value"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textAlignment="center"
+
+            android:background="@drawable/btn_input" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/btn_back"
+
+            android:text="@string/back_short"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/btn_next"
+
+            android:text="@string/next_short"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+</TableLayout>
