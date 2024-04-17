@@ -48,7 +48,7 @@
         android:hint="@string/alcohol_price"
         android:textSize="14sp"
         android:textColor="@color/primary"
-        android:textColorHint="@color/primary"
+        android:textColorHint="@color/background"
         android:textStyle="bold"
         android:textAlignment="center"
 
@@ -67,7 +67,7 @@
         android:hint="@string/gas_price"
         android:textSize="14sp"
         android:textColor="@color/primary"
-        android:textColorHint="@color/primary"
+        android:textColorHint="@color/background"
         android:textStyle="bold"
         android:textAlignment="center"
 
@@ -85,13 +85,15 @@
 
         android:text="@string/next_complete"
         android:textSize="14sp"
-        android:textColor="@color/primary"
+        android:textColor="@color/background"
         android:textStyle="bold"
         android:textAlignment="center"
 
+        android:drawableEnd="@drawable/next_icon"
+
         android:layout_gravity="center"
 
-        android:background="@drawable/btn_submit" />
+        android:backgroundTint="@color/primary" />
 
 
 </LinearLayout>

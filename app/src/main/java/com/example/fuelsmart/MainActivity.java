@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     prizes.putString("alcoholPrize", alcoholPrice);
                     prizes.putString("gasPrize", gasPrice);
                     nextPage.putExtras(prizes);
+
+                    // Passando para próxima tela
+                    startActivity(nextPage);
                 }
             }
         };
