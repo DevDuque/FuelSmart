@@ -30,7 +30,7 @@ public class ConsumePageActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(onClickSubmit());
 
         Button btnBack = (Button) findViewById(R.id.btn_back);
-        btnSubmit.setOnClickListener(onClickBack());
+        btnBack.setOnClickListener(onClickBack());
     }
 
     private void alert(String s) {
@@ -71,7 +71,7 @@ public class ConsumePageActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent previousPage = new Intent(getBaseContext(), ConsumePageActivity.class);
+                Intent previousPage = new Intent(getBaseContext(), MainActivity.class);
 
                 startActivity(previousPage);
             }

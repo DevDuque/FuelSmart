@@ -49,15 +49,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@color/primary"
 
-            android:textSize="48sp"
+            android:text="@string/best_case_title"
+            android:textColor="@color/primary"
+            android:textSize="28sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/coin_logo" />
+
+        <TextView
+            android:id="@+id/result_value"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Resultado: "
+            android:textColor="@color/result_text"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
