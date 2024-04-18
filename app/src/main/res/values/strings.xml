@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">FuelSmart</string>
-    <string name="alcohol_price">ENTRE O VALOR DO LITRO DO ÁLCOOL</string>
+    <string name="alcohol_price">ENTRE O VALOR DO LITRO DO ÁLCOOL (R$)</string>
     <string name="alcohol_value"> ENTRE O CONSUMO DE ÁLCOOL (KM/L) </string>
 
-    <string name="gas_price">ENTRE O VALOR DO LITRO DA GASOLINA</string>
+    <string name="gas_price">ENTRE O VALOR DO LITRO DA GASOLINA (R$)</string>
     <string name="gas_value"> ENTRE O CONSUMO DE GASOLINA (KM/L) </string>
-
 
     <string name="next_complete">CONTINUAR PARA PRÓXIMA PÁGINA</string>
     <string name="next_short"> AVANÇAR </string>
 
     <string name="back_complete">VOLTAR PARA O ÍNICIO</string>
     <string name="back_short"> VOLTAR </string>
+
     <string name="best_case_title">Melhor caso possível</string>
     <string name="data_inserted">Dados inseridos</string>
 </resources>
