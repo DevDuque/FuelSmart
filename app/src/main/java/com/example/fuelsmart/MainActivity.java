@@ -41,20 +41,23 @@ public class MainActivity extends AppCompatActivity {
                 EditText alcoholInput = (EditText) findViewById(R.id.input_AlcoholPrice);
                 EditText gasInput = (EditText) findViewById(R.id.input_GasPrice);
 
-                String alcoholPrice = alcoholInput.getText().toString();
-                String gasPrice = gasInput.getText().toString();
+                String alcoholPriceStr = alcoholInput.getText().toString();
+                String gasPriceStr = gasInput.getText().toString();
 
                 // Garantindo que os campos foram inseridos
-                if(alcoholPrice.isEmpty() || gasPrice.isEmpty()) {
+                if(alcoholPriceStr.isEmpty() || gasPriceStr.isEmpty()) {
                     alert("Por favor insira um valor válido para os campos");
                 } else {
                     // Navegando para próxima tela
                     Intent nextPage = new Intent(getBaseContext(), ConsumePageActivity.class);
 
+                    double alcoholPrice = Double.parseDouble(alcoholPriceStr);
+                    double gasPrice = Double.parseDouble(gasPriceStr);
+
                     // Salvando os preços
                     Bundle prizes = new Bundle();
-                    prizes.putString("alcoholPrize", alcoholPrice);
-                    prizes.putString("gasPrize", gasPrice);
+                    prizes.putDouble("alcoholPrice", alcoholPrice);
+                    prizes.putDouble("gasPrice", gasPrice);
                     nextPage.putExtras(prizes);
 
                     // Passando para próxima tela

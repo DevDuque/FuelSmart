@@ -20,16 +20,16 @@ public class ConsumePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_consume_page);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.consume_page), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        Button btnSubmit = (Button) findViewById(R.id.btn_next);
+        Button btnSubmit = findViewById(R.id.btn_next);
         btnSubmit.setOnClickListener(onClickSubmit());
 
-        Button btnBack = (Button) findViewById(R.id.btn_back);
+        Button btnBack = findViewById(R.id.btn_back);
         btnBack.setOnClickListener(onClickBack());
     }
 
@@ -44,21 +44,27 @@ public class ConsumePageActivity extends AppCompatActivity {
                 EditText alcoholInput = (EditText) findViewById(R.id.input_AlcoholValue);
                 EditText gasInput = (EditText) findViewById(R.id.input_GasValue);
 
-                String alcoholValue = alcoholInput.getText().toString();
-                String gasValue = gasInput.getText().toString();
+                String alcoholValueStr = alcoholInput.getText().toString();
+                String gasValueStr = gasInput.getText().toString();
 
                 // Garantindo que os campos foram inseridos
-                if(alcoholValue.isEmpty() || gasValue.isEmpty()) {
+                if(alcoholValueStr.isEmpty() || gasValueStr.isEmpty()) {
                     alert("Por favor insira um valor válido para os campos");
                 } else {
+                    // Pegando os dados da tela de preços
+                    Bundle data = getIntent().getExtras();
+
+                    double alcoholValue = Double.parseDouble(alcoholValueStr);
+                    double gasValue = Double.parseDouble(gasValueStr);
+
+                    assert data != null;
+                    data.putDouble("alcoholValue", alcoholValue);
+                    data.putDouble("gasValue", gasValue);
+
                     // Navegando para próxima tela
                     Intent nextPage = new Intent(getBaseContext(), ResultPageActivity.class);
 
-                    // Salvando os preços
-                    Bundle values = new Bundle();
-                    values.putString("alcoholValue", alcoholValue);
-                    values.putString("gasValue", gasValue);
-                    nextPage.putExtras(values);
+                    nextPage.putExtras(data);
 
                     // Passando para próxima tela
                     startActivity(nextPage);
