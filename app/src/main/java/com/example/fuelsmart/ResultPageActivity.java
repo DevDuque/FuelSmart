@@ -53,7 +53,7 @@ public class ResultPageActivity extends AppCompatActivity {
                 if (alcoholResult < gasResult) {
                     resultMessage = "ÁLCOOL: R$ " + formattedAlcoholResult + " por KM";
                 } else if (gasResult < alcoholResult) {
-                    resultMessage = "GASOLINA: R$ " + gasResult + " por KM";
+                    resultMessage = "GASOLINA: R$ " + formattedGasResult + " por KM";
                 } else {
                     resultMessage = "Ambos têm o custo de R$ " + formattedGasResult + " por KM";
                 }
