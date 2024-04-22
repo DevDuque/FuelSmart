@@ -10,4 +10,4 @@ Esta aplicação permite aos usuários inserir seus dados e receber recomendaç�
 
 <h1 align="left"> Design do Projeto </h1>
 
-Você pode visualizar o design por [esse link](https://www.figma.com/file/pBNX5SfFoW0aOZmO4MbAvE/FuelSmart?type=design&node-id=0%3A1&mode=design&t=IMxhl9tdo15a61Hj-1). Será necessário uma conta do <a href="https://www.figma.com"> <img src="https://skillicons.dev/icons?i=figma" /> </a>  para visualizar. 
+Você pode visualizar o design por [esse link](https://www.figma.com/file/pBNX5SfFoW0aOZmO4MbAvE/FuelSmart?type=design&node-id=0%3A1&mode=design&t=IMxhl9tdo15a61Hj-1). Será necessário uma conta do <a href="https://www.figma.com"> <img src="https://skillicons.dev/icons?i=figma" /></a>  para visualizar. 
